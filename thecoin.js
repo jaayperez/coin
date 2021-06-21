@@ -26,7 +26,7 @@ class BlockCrypto {
 
 class Blockchain {
   constructor() {
-    this.block1chain = [this.startGenesisBlock()];
+    this.block1chain = [this.initGenesisBlock()];
   }
   // This is the first block created in the peer-to-peer network and has not been linked to any other. To our knowledge of indexing it’s at index 0.
   initGenesisBlock() {
@@ -42,7 +42,6 @@ class Blockchain {
     newBlock.hash = newBlock.computeHash();
     this.block1chain.push(newBlock);
   }
-
 
   // This method verifies the integrity of the blockchain.
   checkChainValidity() {
