@@ -1,0 +1,22 @@
+{
+  "name": "coin",
+  "version": "1.0.0",
+  "description": "A simple cryptocurrency system written in Node.js",
+  "main": "thecoin.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Perez",
+  "license": "MIT",
+  "keywords": [
+    "crypto",
+    "cryptocurrency",
+    "node",
+    "npm"
+  ],
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {}
+}
