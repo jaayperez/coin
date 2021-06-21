@@ -23,3 +23,23 @@ class BlockCrypto {
     ).toString();
   }
 }
+
+class Blockchain {
+  constructor() {
+    this.block1chain = [this.startGenesisBlock()];
+  }
+  // This is the first block created in the peer-to-peer network and has not been linked to any other. To our knowledge of indexing it’s at index 0.
+  initGenesisBlock() {
+    return new BlockCrypto(0, "06/20/2021", "Initial Block in the Chain", "0");
+  }
+  // As named, we use it for finding the last block added in the chain. As explained earlier, it helps to ensure the hash of the current block and map it to the hash of the previous block to ensure the chain integrity.
+  latestBlock() {
+    return this.block1chain[this.block1chain.length - 1];
+  }
+  // A new block is added to the chain using this method. The previous hash block is matched to the current hash block to ensure minimal or no tampering with the chain.
+  addNewBlock(newBlock) {
+    newBlock.nextHash = this.latestBlock().hash;
+    newBlock.hash = newBlock.computeHash();
+    this.block1chain.push(newBlock);
+  }
+}
