@@ -63,3 +63,26 @@ class Blockchain {
     return true;
   }
 }
+
+// Now let's create a new instance of the Blockchain class and name it thecoin.
+let thecoin = new Blockchain();
+
+console.log("thecoin mining progressing....");
+// Added some blocks into the blockchain using arbitrary values.
+thecoin.addNewBlock(
+  new BlockCrypto(1, "06/20/2021", {
+    sender: "Justin Perez",
+    recipient: "Jeff Bezos",
+    quantity: 1000000
+  })
+);
+
+thecoin.addNewBlock(
+  new BlockCrypto(2, "06/21/2022", {
+    sender: "Elon Musk",
+    recipient: "Justin Perez",
+    quantity: 11000000
+  })
+);
+
+console.log(JSON.stringify(thecoin, null, 4));
