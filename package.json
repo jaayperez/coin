@@ -5,6 +5,7 @@
   "main": "thecoin.js",
   "private": true,
   "scripts": {
+    "start": "node thecoin.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Justin Perez",
